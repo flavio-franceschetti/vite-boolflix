@@ -32,6 +32,12 @@ export default {
       v-for="(info, index) in store.searchedTvSeries"
       :key="index"
     >
+      <div class="poster">
+        <img
+          :src="store.posterUrl + info.poster_path"
+          :alt="info.original_name"
+        />
+      </div>
       <!-- titolo della serie -->
       <div>Titolo della serie: {{ info.name }}</div>
       <div>Titolo originale della serie: {{ info.original_name }}</div>
@@ -50,6 +56,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.poster {
+  height: 388px;
+  align-content: center;
+  img {
+    aspect-ratio: 1 / 1.5;
+  }
+}
+
 h2 {
   margin: 30px;
   text-transform: uppercase;

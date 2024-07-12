@@ -10,4 +10,5 @@ export const store = reactive({
   api_SeriesEndPoint: "https://api.themoviedb.org/3/search/tv?language=it-IT",
   searchedFilms: [],
   searchedTvSeries: [],
+  posterUrl: "https://image.tmdb.org/t/p/w342",
 });
