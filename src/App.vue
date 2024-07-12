@@ -26,6 +26,7 @@ export default {
         .then(function (response) {
           // handle success
           console.log(response.data.results);
+          store.searchedFilms = response.data.results;
         })
         .catch(function (error) {
           // handle error
