@@ -30,19 +30,21 @@ export default {
 
 <template>
   <div class="container">
-    <div class="info" v-for="(info, index) in store.searchedFilms" :key="index">
+    <div
+      class="film-info"
+      v-for="(info, index) in store.searchedFilms"
+      :key="index"
+    >
       <!-- titolo del film -->
       <div>Titolo del film: {{ info.title }}</div>
       <div>Titolo originale del film: {{ info.original_title }}</div>
 
       <!-- Linguaggio del film -->
-      <div v-if="">
+      <div>
         Linguaggio originale del film:
         <span :class="`fi fi-${getFlagCode(info.original_language)}`"></span>
       </div>
-      <div v-else>
-        Linguaggio originale del film: {{ info.original_language }}
-      </div>
+      <div>Linguaggio originale del film: {{ info.original_language }}</div>
 
       <!-- voto del film -->
       <div>Voto del film: {{ info.vote_average }}</div>
@@ -56,7 +58,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
 
-  .info {
+  .film-info {
     width: calc(100% / 5);
     margin-bottom: 20px;
     text-align: center;
