@@ -20,12 +20,10 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h2>Film List</h2>
+  <div class="container">
     <FilmCards />
   </div>
-  <div>
-    <h2>TV Series List</h2>
+  <div class="container">
     <TvSeriesCard />
   </div>
 </template>

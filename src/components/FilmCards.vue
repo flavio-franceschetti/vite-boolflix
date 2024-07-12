@@ -15,10 +15,6 @@ export default {
       // quindi mappiamo correttamente le lingue ai codici delle bandiere
       const languageMap = {
         en: "us",
-        it: "it",
-        es: "es",
-        de: "de",
-        fr: "fr",
         ko: "kr",
         // Aggiungi altre mappature se necessario
       };
@@ -29,6 +25,7 @@ export default {
 </script>
 
 <template>
+  <h2>Film List</h2>
   <div class="container">
     <div
       class="film-info"
@@ -53,10 +50,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+h2 {
+  margin: 30px;
+  text-transform: uppercase;
+}
+
 .container {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto;
 
   .film-info {
     width: calc(100% / 5);
