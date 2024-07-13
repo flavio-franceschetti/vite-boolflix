@@ -20,6 +20,10 @@ export default {
       };
       return languageMap[language] || language;
     },
+
+    vote(vote) {
+      return Math.round(vote / 2);
+    },
   },
 };
 </script>
@@ -44,10 +48,16 @@ export default {
         Linguaggio originale del film:
         <span :class="`fi fi-${getFlagCode(info.original_language)}`"></span>
       </div>
-      <div>Linguaggio originale del film: {{ info.original_language }}</div>
+      <!-- <div>Linguaggio originale del film: {{ info.original_language }}</div> -->
 
       <!-- voto del film -->
-      <div>Voto del film: {{ info.vote_average }}</div>
+      <!-- <div>Voto del film: {{ this.vote(info.vote_average) }}</div> -->
+      <i
+        v-for="i in 5"
+        :key="i"
+        class="fa-star"
+        :class="this.vote(info.vote_average) >= i ? 'fa-solid' : 'fa-regular'"
+      ></i>
     </div>
   </div>
 </template>
