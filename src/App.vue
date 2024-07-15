@@ -52,6 +52,8 @@ export default {
     globalSearch() {
       this.searchedFilms();
       this.searchedTvSeries();
+      store.search = "";
+      store.emptyList = "";
     },
   },
 };
